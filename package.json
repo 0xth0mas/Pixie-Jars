@@ -1,0 +1,14 @@
+{
+  "name": "hardhat-project",
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+    "@openzeppelin/contracts": "^4.8.1",
+    "cli-progress": "^3.11.2",
+    "hardhat": "^2.12.6"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.7",
+    "eth-gas-reporter": "^0.2.25",
+    "hardhat-gas-reporter": "^1.0.9"
+  }
+}
