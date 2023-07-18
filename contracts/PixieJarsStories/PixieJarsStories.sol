@@ -19,7 +19,11 @@ contract PixieJarsStories is IPixieJarsStories, ERC1155PSupply, Ownable {
         _;
     }
 
-    constructor() ERC1155P("Pixie Jars Stories", "PJS") {}
+    //constructor() ERC1155P("Pixie Jars Stories", "PJS") {}
+
+    function uri(uint256 id) external view returns (string memory) {
+        return "";
+    }
 
     /**
      * @dev Mints single token for given address, can only be called by authorized minting contracts.
@@ -29,7 +33,7 @@ contract PixieJarsStories is IPixieJarsStories, ERC1155PSupply, Ownable {
         uint256 id,
         uint256 amount
     ) external onlyAllowedMinter {
-        _mint(to, id, amount, "");
+        _mint(to, to, id, amount, "");
     }
 
     /**
@@ -40,7 +44,7 @@ contract PixieJarsStories is IPixieJarsStories, ERC1155PSupply, Ownable {
         uint256[] calldata ids,
         uint256[] calldata amounts
     ) external onlyAllowedMinter {
-        _mintBatch(to, ids, amounts, "");
+        _mintBatch(to, to, ids, amounts, "");
     }
 
     /**
